@@ -40,7 +40,7 @@ router.post('/products',
 //* GEt req - get all products
 router.get('/products' , async(req, res) => {
     try {
-        let products = await Product.find().populate('owner category').exec()
+        let products = await Product.find().populate("owner category").exec()
         res.json({
             status: true,
             products: products
